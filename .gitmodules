@@ -1,0 +1,6 @@
+[submodule "iop-profile-server"]
+	path = iop-profile-server
+	url = https://github.com/Internet-of-People/iop-profile-server.git
+[submodule "iop-sdk-netcore"]
+	path = iop-sdk-netcore
+	url = https://github.com/Internet-of-People/iop-sdk-netcore.git

@@ -1,6 +1,6 @@
 FROM microsoft/dotnet:1.1-sdk AS build-env
 
-COPY . ./
+COPY iop-profile-server ./iop-profile-server
 
 WORKDIR iop-profile-server/src/ProfileServer
 

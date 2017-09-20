@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:1.0-sdk AS build-env
+FROM microsoft/dotnet:1-sdk AS build-env
 
 COPY . ./
 

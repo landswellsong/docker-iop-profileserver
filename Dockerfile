@@ -19,5 +19,8 @@ COPY --from=build-env /build /usr/app
 # because somehow it's not done automatically
 COPY --from=build-runtime /usr/share/dotnet/shared/Microsoft.NETCore.App/2.0.0/*.so /usr/app/
 
+# Enable tracing
+ENV COREHOST_TRACE 1
+
 # COPY ProfileServer.runtimeconfig.json /usr/app
 ENTRYPOINT ["dotnet", "ProfileServer.dll"]

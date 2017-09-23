@@ -5,7 +5,7 @@ openssl req -nodes -x509 -newkey rsa:4096 -subj "/C=CI/ST=CI/L=CI/O=CI/CN=CI" \-
 openssl pkcs12 -export -out ProfileServer.pfx -inkey ProfileServer.key -in ProfileServer.cer -passout pass:""
  
 # Determine the IP address
-extip=$(dig +short myip.opendns.com @resolver1.opendns.com)
+extip=$(curl ipinfo.io/ip)
 sed -i -e "/external_server_address =/ s/= .*/= ${extip}/" ./ProfileServer.conf
  
 # Run the thing
